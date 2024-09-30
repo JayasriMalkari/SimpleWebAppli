@@ -16,7 +16,7 @@ public class ProductController {
         return service.getProducts();
     }
     @GetMapping("products/{productId}")
-    public Product getProductByID(@PathVariable int productId) {
+    public Product getProductByID(@PathVariable long productId) {
         return service.getProductById(productId);
 
     }
@@ -29,7 +29,7 @@ public class ProductController {
         service.UpdateProduct(product);
   }
   @DeleteMapping("/products/{productId}")
-  public void deleteProduct(@PathVariable int productId){
+  public void deleteProduct(@PathVariable Long productId){
         service.deleteProduct(productId);
 
 
